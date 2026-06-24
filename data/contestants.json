@@ -1,0 +1,286 @@
+{
+  "lastUpdated": "2026-06-24T19:32:00.848Z",
+  "source": "https://www.marieclaire.com/culture/tv-shows/love-island-usa-season-8-cast/",
+  "contestants": [
+    {
+      "fullName": "Aniya Harvey",
+      "firstName": "Aniya",
+      "gender": "female",
+      "origin": "OG",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Kenzie Annis",
+      "firstName": "Kenzie",
+      "gender": "female",
+      "origin": "OG",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Melanie Moreno",
+      "firstName": "Melanie",
+      "gender": "female",
+      "origin": "OG",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Trinity Tatum",
+      "firstName": "Trinity",
+      "gender": "female",
+      "origin": "OG",
+      "status": "active",
+      "is_model": true
+    },
+    {
+      "fullName": "Sincere Rhea",
+      "firstName": "Sincere",
+      "gender": "male",
+      "origin": "OG",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Bryce Dettloff",
+      "firstName": "Bryce",
+      "gender": "male",
+      "origin": "OG",
+      "status": "active",
+      "is_model": true
+    },
+    {
+      "fullName": "Zach Georgiou",
+      "firstName": "Zach",
+      "gender": "male",
+      "origin": "OG",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "KC Chandler",
+      "firstName": "KC",
+      "gender": "male",
+      "origin": "OG",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Kayda Bosse",
+      "firstName": "Kayda",
+      "gender": "female",
+      "origin": "bombshell",
+      "status": "active",
+      "is_model": true
+    },
+    {
+      "fullName": "Corbin Mims",
+      "firstName": "Corbin",
+      "gender": "male",
+      "origin": "bombshell",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Jen Terry",
+      "firstName": "Jen",
+      "gender": "female",
+      "origin": "bombshell",
+      "status": "active",
+      "is_model": true
+    },
+    {
+      "fullName": "Caleb McDaniel",
+      "firstName": "Caleb",
+      "gender": "male",
+      "origin": "bombshell",
+      "status": "active",
+      "is_model": true
+    },
+    {
+      "fullName": "Amora Cacheé",
+      "firstName": "Amora",
+      "gender": "female",
+      "origin": "casa",
+      "status": "active",
+      "is_model": true
+    },
+    {
+      "fullName": "Parmida Keshani",
+      "firstName": "Parmida",
+      "gender": "female",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Jaiden Bacciocco",
+      "firstName": "Jaiden",
+      "gender": "female",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Tierra Davis",
+      "firstName": "Tierra",
+      "gender": "female",
+      "origin": "casa",
+      "status": "active",
+      "is_model": true
+    },
+    {
+      "fullName": "Alannah Keyser",
+      "firstName": "Alannah",
+      "gender": "female",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Sydney Eugene",
+      "firstName": "Sydney",
+      "gender": "female",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Carl Schmidt",
+      "firstName": "Carl",
+      "gender": "male",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Chay Nehra",
+      "firstName": "Chay",
+      "gender": "male",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Corey Sawyer Jr.",
+      "firstName": "Corey",
+      "gender": "male",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Dylan Wrona",
+      "firstName": "Dylan",
+      "gender": "male",
+      "origin": "casa",
+      "status": "active",
+      "is_model": true
+    },
+    {
+      "fullName": "Gal Tshnieder",
+      "firstName": "Gal",
+      "gender": "male",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Ronnie Gunter",
+      "firstName": "Ronnie",
+      "gender": "male",
+      "origin": "casa",
+      "status": "active",
+      "is_model": false
+    },
+    {
+      "fullName": "Vasana Montgomery",
+      "firstName": "Vasana",
+      "gender": "female",
+      "origin": "OG",
+      "status": "dumped",
+      "is_model": false
+    },
+    {
+      "fullName": "Sean Reifel",
+      "firstName": "Sean",
+      "gender": "male",
+      "origin": "OG",
+      "status": "dumped",
+      "is_model": false
+    },
+    {
+      "fullName": "Beatriz Hatz",
+      "firstName": "Beatriz",
+      "gender": "female",
+      "origin": "bombshell",
+      "status": "dumped",
+      "is_model": false
+    },
+    {
+      "fullName": "Sol Dean",
+      "firstName": "Sol",
+      "gender": "female",
+      "origin": "bombshell",
+      "status": "dumped",
+      "is_model": true
+    },
+    {
+      "fullName": "Gabriel Vasconcelos",
+      "firstName": "Gabriel",
+      "gender": "male",
+      "origin": "bombshell",
+      "status": "dumped",
+      "is_model": true
+    },
+    {
+      "fullName": "Chandlar Wilson",
+      "firstName": "Chandlar",
+      "gender": "male",
+      "origin": "casa",
+      "status": "dumped",
+      "is_model": false
+    },
+    {
+      "fullName": "Keyon Harry",
+      "firstName": "Keyon",
+      "gender": "male",
+      "origin": "casa",
+      "status": "dumped",
+      "is_model": true
+    },
+    {
+      "fullName": "Kyle Greene",
+      "firstName": "Kyle",
+      "gender": "male",
+      "origin": "casa",
+      "status": "dumped",
+      "is_model": false
+    },
+    {
+      "fullName": "Ryan Ten Hulscher",
+      "firstName": "Ryan",
+      "gender": "male",
+      "origin": "casa",
+      "status": "dumped",
+      "is_model": false
+    },
+    {
+      "fullName": "Tino Ellis",
+      "firstName": "Tino",
+      "gender": "male",
+      "origin": "casa",
+      "status": "dumped",
+      "is_model": true
+    },
+    {
+      "fullName": "Trae Taylor",
+      "firstName": "Trae",
+      "gender": "male",
+      "origin": "casa",
+      "status": "dumped",
+      "is_model": false
+    }
+  ]
+}

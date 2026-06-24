@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Islandle 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky">
+    <div class="palm palm-left">🌴</div>
+    <div class="palm palm-right">🌴</div>
+    <div class="sun"></div>
+  </div>
+
+  <main>
+    <header>
+      <h1>Love <span class="heart">💕</span> Islandle</h1>
+      <p class="tagline">Guess today's Love Island USA Season 8 islander</p>
+    </header>
+
+    <section class="guess-area">
+      <div class="input-wrap">
+        <input
+          id="guess-input"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Type an islander's name..."
+        />
+        <button id="guess-button" type="button">Couple Up 💞</button>
+        <ul id="suggestions" class="suggestions" role="listbox"></ul>
+      </div>
+      <p id="status-line" class="status-line"></p>
+      <div class="controls">
+        <button id="new-game-btn" type="button" class="ghost-btn" title="Pick a new random islander and start over">🎲 New random game</button>
+        <button id="daily-btn" type="button" class="ghost-btn" title="Go back to today's daily puzzle">📅 Today's puzzle</button>
+      </div>
+    </section>
+
+    <section class="board-section">
+      <div class="board-header">
+        <div>Name</div>
+        <div>Gender</div>
+        <div>Origin</div>
+        <div>Status</div>
+        <div>Annoying</div>
+        <div>South FL</div>
+        <div>Model</div>
+      </div>
+      <div id="board" class="board"></div>
+    </section>
+
+    <div id="endgame-backdrop" class="endgame-backdrop hidden">
+      <section id="endgame" class="endgame" role="dialog" aria-modal="true" aria-labelledby="endgame-title">
+        <button id="endgame-close" type="button" class="endgame-close" aria-label="Close">×</button>
+        <h2 id="endgame-title"></h2>
+        <p id="endgame-detail"></p>
+        <div id="endgame-grid" class="endgame-grid" aria-hidden="true"></div>
+        <button id="share-btn" type="button">Copy result 📋</button>
+        <p class="next-up" id="next-up"></p>
+      </section>
+    </div>
+
+    <footer>
+      <p class="meta">
+        Cast data scraped from
+        <a href="https://www.marieclaire.com/culture/tv-shows/love-island-usa-season-8-cast/" target="_blank" rel="noopener">Marie Claire</a>
+        · last updated <span id="last-updated">—</span>
+      </p>
+      <details>
+        <summary>How to play</summary>
+        <ul>
+          <li>You have <strong>8 guesses</strong> to find today's islander.</li>
+          <li>Each guess must be a real cast member from the season.</li>
+          <li>Each tile turns 💖 pink when it matches the answer.</li>
+          <li>"Annoying" can be yellow for a partial match (kinda vs yes/no).</li>
+          <li>Gray "?" means "don't know yet" — not enough info on that islander.</li>
+          <li>A new puzzle (different islander to guess) appears each day at midnight 🌅</li>
+        </ul>
+      </details>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
