@@ -222,6 +222,10 @@ h1 {
 }
 .ghost-btn:hover { background: rgba(124, 58, 237, 0.1); }
 .ghost-btn.active { background: rgba(255, 107, 157, 0.18); border-style: solid; border-color: var(--hot-pink); color: var(--hot-pink); }
+.ghost-btn.danger { border-color: rgba(220, 38, 38, 0.4); color: #b91c1c; margin-left: auto; }
+.ghost-btn.danger:hover { background: rgba(220, 38, 38, 0.08); }
+.ghost-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.ghost-btn:disabled:hover { background: transparent; }
 
 .board-section {
   background: rgba(255, 255, 255, 0.86);

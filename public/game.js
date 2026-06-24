@@ -20,6 +20,7 @@ const els = {
   updated:  document.getElementById('last-updated'),
   newGame:  document.getElementById('new-game-btn'),
   daily:    document.getElementById('daily-btn'),
+  giveUp:   document.getElementById('give-up-btn'),
 };
 
 let mode = 'daily'; // 'daily' or 'random'
@@ -29,6 +30,7 @@ let byName = new Map();
 let answer = null;
 let guesses = []; // [{fullName, tiles: [{value, state}]}]
 let activeSuggestionIndex = -1;
+let gaveUp = false;
 
 // ---------- bootstrap
 
@@ -52,6 +54,7 @@ async function init() {
 function startRandomGame() {
   mode = 'random';
   guesses = [];
+  gaveUp = false;
   const choices = contestants.filter((c) => c.fullName !== answer.fullName);
   answer = choices[Math.floor(Math.random() * choices.length)];
   els.input.value = '';
@@ -65,6 +68,7 @@ function startRandomGame() {
 function backToDaily() {
   mode = 'daily';
   guesses = [];
+  gaveUp = false;
   answer = pickTodaysAnswer(contestants);
   loadPersistedState();
   els.input.value = '';
@@ -72,6 +76,15 @@ function backToDaily() {
   hideSuggestions();
   render();
   updateModeButtons();
+}
+
+function giveUp() {
+  if (gaveUp || guesses.some((g) => g.fullName === answer.fullName)) return;
+  const ok = confirm(`Give up and reveal today's islander?`);
+  if (!ok) return;
+  gaveUp = true;
+  persistState();
+  render();
 }
 
 function updateModeButtons() {
@@ -99,9 +112,8 @@ function loadPersistedState() {
     const raw = localStorage.getItem(todayKey());
     if (!raw) return;
     const parsed = JSON.parse(raw);
-    if (parsed && Array.isArray(parsed.guesses)) {
-      guesses = parsed.guesses;
-    }
+    if (parsed && Array.isArray(parsed.guesses)) guesses = parsed.guesses;
+    if (parsed && typeof parsed.gaveUp === 'boolean') gaveUp = parsed.gaveUp;
   } catch {}
 }
 
@@ -110,6 +122,7 @@ function persistState() {
   try {
     localStorage.setItem(todayKey(), JSON.stringify({
       guesses,
+      gaveUp,
       answer: answer.fullName,
     }));
   } catch {}
@@ -188,7 +201,8 @@ function renderRow(tiles) {
 function renderEndgame() {
   const won = guesses.some((g) => g.fullName === answer.fullName);
   const lost = !won && guesses.length >= MAX_GUESSES;
-  if (!won && !lost) {
+  const over = won || lost || gaveUp;
+  if (!over) {
     closeEndgame();
     setInputDisabled(false);
     return;
@@ -197,6 +211,9 @@ function renderEndgame() {
     const tries = guesses.length;
     els.egTitle.textContent = `Coupled up! 💞`;
     els.egDetail.textContent = `You found ${answer.fullName} in ${tries} ${tries === 1 ? 'guess' : 'guesses'}.`;
+  } else if (gaveUp) {
+    els.egTitle.textContent = `You waved the white flag 🏳️`;
+    els.egDetail.textContent = `${mode === 'daily' ? "Today's" : "The"} islander was ${answer.fullName}.`;
   } else {
     els.egTitle.textContent = `Dumped from the villa 😭`;
     els.egDetail.textContent = `${mode === 'daily' ? "Today's" : "The"} islander was ${answer.fullName}.`;
@@ -234,6 +251,7 @@ function timeUntilMidnight() {
 function setInputDisabled(disabled) {
   els.input.disabled = disabled;
   els.button.disabled = disabled;
+  els.giveUp.disabled = disabled;
   if (disabled) hideSuggestions();
 }
 
@@ -248,6 +266,7 @@ function wireEvents() {
   els.share.addEventListener('click', copyShareText);
   els.newGame.addEventListener('click', startRandomGame);
   els.daily.addEventListener('click', backToDaily);
+  els.giveUp.addEventListener('click', giveUp);
   els.egClose.addEventListener('click', closeEndgame);
   els.backdrop.addEventListener('click', (e) => { if (e.target === els.backdrop) closeEndgame(); });
   document.addEventListener('keydown', (e) => {
