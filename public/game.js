@@ -277,7 +277,7 @@ function showSuggestions(list) {
   list.forEach((c, i) => {
     const li = document.createElement('li');
     li.dataset.fullname = c.fullName;
-    li.innerHTML = `${c.fullName}<span class="meta-tag">${c.origin}${c.status === 'dumped' ? ' · dumped' : ''}</span>`;
+    li.textContent = c.fullName;
     li.addEventListener('mousedown', (e) => {
       e.preventDefault();
       els.input.value = c.fullName;
