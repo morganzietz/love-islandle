@@ -2,7 +2,7 @@
   "name": "love-islandle",
   "version": "1.0.0",
   "description": "Wordle-style daily game for Love Island USA Season 8 contestants",
-  "main": "server.js",
+  "private": true,
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",

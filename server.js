@@ -12,8 +12,8 @@ const RATINGS_PATH = path.join(__dirname, 'data', 'user-ratings.json');
 
 const app = express();
 
-// Static assets are at the project root for Vercel compatibility.
-app.use(express.static(__dirname, {
+// Static assets live in /public (Vercel's standard convention).
+app.use(express.static(path.join(__dirname, 'public'), {
   index: 'index.html',
   setHeaders: (res, filePath) => {
     if (filePath.endsWith('.html')) res.setHeader('Cache-Control', 'no-cache');
