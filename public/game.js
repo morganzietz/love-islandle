@@ -366,7 +366,10 @@ function copyShareText() {
   const symbols = { match: '💖', partial: '💛', miss: '⬛', unknown: '⬜' };
   const lines = guesses.map((g) => g.tiles.map((t) => symbols[t.state] || '⬛').join(''));
   const won = guesses.some((g) => g.fullName === answer.fullName);
-  const header = `Love Islandle ${dateStamp()} ${won ? guesses.length : 'X'}/${MAX_GUESSES}`;
+  const score = won ? guesses.length : 'X';
+  const header = mode === 'daily'
+    ? `Love Islandle ${dateStamp()} ${score}/${MAX_GUESSES}`
+    : `Love Islandle 🎲 Random ${score}/${MAX_GUESSES}`;
   const text = `${header}\n${lines.join('\n')}`;
   navigator.clipboard.writeText(text).then(
     () => { els.share.textContent = 'Copied! 💌'; setTimeout(() => (els.share.textContent = 'Copy result 📋'), 1800); },
